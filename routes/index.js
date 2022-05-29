@@ -10,7 +10,8 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  const data = req.body;
+  const data = req;
+  console.log(req.body);
   const msg = {
     from: process.env.SENDGRID_FROM_EMAIL,
     template_id: process.env.SENDGRID_TEMPLATE_ID,
@@ -19,9 +20,6 @@ router.post("/", async (req, res) => {
         to: [
           {
             email: process.env.SENDGRID_TO_EMAIL,
-          },
-          {
-            email: data.email,
           },
         ],
         dynamic_template_data: {
