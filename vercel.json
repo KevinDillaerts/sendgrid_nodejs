@@ -6,7 +6,6 @@
       "maxDuration": 10
     }
   },
-  "routes": [{ "src": "/api/(.*)", "dest": "/api/index.js" }],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -22,6 +21,10 @@
         {
           "key": "Access-Control-Allow-Headers",
           "value": "Content-Type, Authorization"
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
         }
       ]
     }
