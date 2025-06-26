@@ -4,9 +4,7 @@
   "description": "SendGrid email backend for Vercel serverless functions",
   "main": "api/index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "deploy": "vercel"
+    "dev": "vercel dev"
   },
   "keywords": [
     "sendgrid",
