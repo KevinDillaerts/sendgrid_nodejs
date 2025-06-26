@@ -1,19 +1,28 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "SendGrid email backend for Vercel serverless functions",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel"
   },
-  "keywords": [],
+  "keywords": [
+    "sendgrid",
+    "email",
+    "vercel",
+    "serverless"
+  ],
   "author": "Kevin Dillaerts",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.7.0",
-    "@vercel/node": "^3.2.28",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "@sendgrid/mail": "^8.1.3"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.2.28"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
